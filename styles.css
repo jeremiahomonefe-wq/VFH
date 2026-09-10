@@ -968,3 +968,44 @@ footer {
 .final-cta .button:first-child {
   color: #000;
 }
+
+/* Conversion paths and final refinement */
+.journeys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.journey-card {
+  min-height: 205px;
+  padding: 2rem clamp(1.25rem, 3vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid var(--line);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.journey-card:last-child { border-right: 0; }
+.journey-card:hover { background: #000; color: #fff; }
+.journey-card span { font-size: .68rem; letter-spacing: .12em; color: var(--gold); font-weight: 700; }
+.journey-card strong { font-family: var(--serif); font-size: 1.45rem; line-height: 1.15; font-weight: 500; }
+.journey-card em { margin-top: auto; font: 700 .74rem var(--sans); color: inherit; font-style: normal; letter-spacing: .02em; }
+.facilities-callout .facilities-photo { min-height: 520px; }
+.inline-whatsapp { display: inline; color: var(--ink); }
+.location-section { display: grid; grid-template-columns: .9fr 1.1fr; background: #fff; }
+.location-copy { padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 8vw, 9rem); align-self: center; }
+.location-copy h2 { margin-bottom: 1.5rem; }
+.booking-note { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin: 1.6rem 0; }
+.map { width: 100%; min-height: 480px; border: 0; filter: grayscale(1) contrast(1.05); }
+.final-cta .booking-note { color: #d9d9d9; margin: 0 0 1.8rem; }
+.contact-options article { cursor: pointer; border: 1px solid transparent; transition: border-color .2s ease, transform .2s ease; }
+.contact-options article:hover { border-color: #000; transform: translateY(-2px); }
+@media (max-width: 800px) { .journeys { grid-template-columns: 1fr; } .journey-card { min-height: 145px; border-right: 0; border-bottom: 1px solid var(--line); } .journey-card:last-child { border-bottom: 0; } .location-section { grid-template-columns: 1fr; } .map { min-height: 340px; } }
+
+/* Reliable icon rendering, independent of page character encoding. */
+.menu-toggle { font-size: 0; }
+.menu-toggle::after { content: '\2630'; font-size: 1.5rem; }
+.text-link span, .three-cols span:not(.number) { font-size: 0; }
+.text-link span::after, .three-cols span:not(.number)::after { content: '\2197'; font-size: 1rem; margin-left: .3rem; }
+.hero-support b { font-size: 0; }
+.hero-support b::after { content: '\2022'; font-size: .9rem; }
